@@ -7,3 +7,11 @@ def last_element(lst):
         >>> last_element([]) is None
         True
     """
+    if (len(lst) != 0):
+        return lst[-1]
+    else:
+        return None
+    
+print(f"Test Case 1: {last_element([1, 2, 3]) == 3}")
+print(f"Test Case 2: {last_element([2]) == 2}")
+print(f"Test Case 3: {last_element([]) == None}")
