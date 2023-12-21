@@ -11,3 +11,14 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    frequency = {}
+    most_freq = None
+    for val in nums:
+        frequency[val] = frequency.get(val, 0) + 1
+    for key in frequency.keys():
+        if most_freq == None or frequency[key] > frequency[most_freq]:
+            most_freq = key
+            
+    # max(frequency, key=frequency.get) - also works instead of another loop
+    return most_freq
+    
