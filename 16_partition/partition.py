@@ -25,9 +25,5 @@ def partition(lst, fn):
     
     result = [[],[]]
     for value in lst:
-        if fn(value):
-            result[0].append(value)
-        else:
-            result[1].append(value)
-    
+        result[0].append(value) if fn(value) else result[1].append(value)
     return result

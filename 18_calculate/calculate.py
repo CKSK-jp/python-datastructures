@@ -26,3 +26,29 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
+     
+    if make_int:
+        a, b = round(a), round(b)
+        
+    do_operation = {
+        'add': lambda a, b: a + b,
+        'subtract': lambda a, b: a - b,
+        'multiply': lambda a, b: a * b,
+        'divide': lambda a, b: a / b,
+    }
+        
+    if (operation not in do_operation.keys()):
+        return None
+    
+    # result = 0
+    # if (operation == 'add'):
+    #     result = a + b
+    # elif (operation == 'subtract'):
+    #     result = a - b
+    # elif (operation == 'multiply'):
+    #     result = a * b
+    # elif (operation == 'divide'):
+    #     result = a / b
+    # else:
+    #     return None
+    return f"{message} {do_operation[operation](a, b)}"
