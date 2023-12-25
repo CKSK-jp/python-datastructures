@@ -40,6 +40,8 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
     if (operation not in do_operation.keys()):
         return None
     
+    return f"{message} {do_operation[operation](a, b)}"
+
     # result = 0
     # if (operation == 'add'):
     #     result = a + b
@@ -51,4 +53,3 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
     #     result = a / b
     # else:
     #     return None
-    return f"{message} {do_operation[operation](a, b)}"
