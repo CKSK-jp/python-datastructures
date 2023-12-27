@@ -11,3 +11,9 @@ def sum_floats(nums):
     # hint: to find out if something is a float, you should use the
     # "isinstance" function --- research how to use this to find out
     # if something is a float!
+    # total = 0
+    # for n in nums:
+    #     total += n if isinstance(n, float) else 0
+    # return total
+    
+    return sum(filter(lambda x: isinstance(x, float), nums))
