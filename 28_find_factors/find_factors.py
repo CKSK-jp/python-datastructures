@@ -13,3 +13,16 @@ def find_factors(num):
     >>> find_factors(321421)
     [1, 293, 1097, 321421]
     """
+
+    factors = []
+    counter = 1
+    end = int(num / 2)
+    while counter < end:
+        if num % counter == 0:
+            factors.append(counter)
+            quo = int(num / counter)
+            factors.append(quo)
+            end = quo**0.5
+        counter += 1
+    factors.sort()
+    return factors

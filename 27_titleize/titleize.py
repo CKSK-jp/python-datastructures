@@ -16,3 +16,5 @@ def titleize(phrase):
     
     capitalized = [word[0].upper() + word[1::1].lower() for word in phrase.split(' ')]
     return (' '.join(capitalized))
+
+    
