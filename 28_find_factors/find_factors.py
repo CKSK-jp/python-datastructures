@@ -19,8 +19,8 @@ def find_factors(num):
     end = int(num / 2)
     while counter < end:
         if num % counter == 0:
-            factors.append(counter)
             quo = int(num / counter)
+            factors.append(counter)
             factors.append(quo)
             end = quo**0.5
         counter += 1
