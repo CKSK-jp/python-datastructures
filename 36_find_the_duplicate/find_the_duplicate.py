@@ -13,3 +13,7 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    check = set(nums)
+    for val in check:
+        nums.remove(val)
+    return nums[0] if len(nums) != 0 else None
